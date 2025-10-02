@@ -1,4 +1,7 @@
-@import "less/_variables.less";
-@import "less/_mixins.less";
-@import "less/_sheet.less";
-@import "less/_rail.less";
+/* --- base/global --- */
+@import "less/global/variables.less";  /* defaults */
+@import "less/global/config.less";     /* overrides */
+@import "less/global/global.less";     /* global rules & utilities */
+
+/* --- actor sheets (your main actor bundle) --- */
+@import "less/actor-sheets/actor-sheets-main.less";
