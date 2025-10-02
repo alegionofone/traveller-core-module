@@ -1,0 +1,28 @@
+# Node / tooling
+node_modules/
+npm-debug.log*
+yarn.lock
+pnpm-lock.yaml
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Build artifacts we don't want (keep the compiled CSS for Foundry!)
+styles/**/*.map
+
+# Env files (if you add any later)
+*.env
+.env.*
+
+packs/**/LOCK
+
+packs/**/*.db-journal
+
+packs/**/*.lock
+
+packs/**
+
+!packs/.gitkeep

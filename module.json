@@ -1,0 +1,40 @@
+{
+  "id": "traveller-core-module",
+  "title": "Traveller - Core Module",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13"
+  },
+  "authors": [
+    {
+      "name": "Author 1",
+      "discord": "alegionofone",
+      "flags": {}
+    }
+  ],
+  "esmodules": [
+    "scripts/traveller-core.js"
+  ],
+  "styles": [
+    "styles/traveller-core.css"
+  ],
+  "flags": {
+    "canUpload": true
+  },
+  "packs": [
+    {
+      "name": "Items",
+      "label": "Items",
+      "path": "packs/Items",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "mgt2e",
+      "flags": {}
+    }
+  ],
+  "description": ""
+}
