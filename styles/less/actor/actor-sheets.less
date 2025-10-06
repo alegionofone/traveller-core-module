@@ -1,0 +1,103 @@
+.window-app.mgt2.sheet.actor {
+  --sheet-w: 800px;
+  --sheet-h: 860px;
+  --sheet-header-h: 36px;
+
+  width: var(--sheet-w) !important;
+  height: var(--sheet-h) !important;
+}
+
+.sheet.actor {
+
+    /* Background */
+    .traveller-sheet {
+        background-image: url(assets/space.png);
+    }
+
+    /* Global text colours within the sheet */
+    label,
+    .addNewSkill {
+        color: var(--color-grey-lt);
+    }
+
+    .characteristic-readonly,
+    input.armour-value {
+        color: var(--color-grey-lt)
+    }
+
+    div.armour-box input {
+        color: var(--color-grey-lt);
+        text-transform: uppercase;
+    }
+
+  /* Field/box titles */
+  .field-label,
+  label.box-title {
+    font-family: var(--font-foundation);
+    color: var(--color-gold-lt);
+    background-color: var(--color-gold-dk-mid);
+    padding: 3px;
+  }
+
+  /* History list */
+  .history-list {
+    margin-bottom: 10px;
+
+    .item {
+      border-bottom: 0;
+    }
+
+    .history-header {
+        background-color: var(--color-gold-dk-mid);
+        font-family: var(--font-foundation);
+        color: var(--color-gold-lt);
+    }
+  }
+
+
+
+  /* Selects */
+  select {
+    font-family: 'Roboto';
+    font-size: var(--font-size-11);
+    color: black;
+  }
+
+  /* Character name block */
+  .charname {
+    font-family: var(--font-foundation);
+    font-size: var(--font-size-40);
+
+    input {
+      color: var(--color-gold-lt);
+      text-align: center;
+      padding-bottom: 5px;
+    }
+  }
+
+  /* DMs */
+  .dm {
+    background: none;
+    border: none;
+    color: var(--color-grey-lt);
+  }
+
+  /* Tabs */
+  .tabs.sheet-tabs {
+    font-family: var(--font-foundation);
+
+    .item {
+      color: var(--color-gold-lt);
+
+      &.active {
+        color: white;
+        text-shadow: none;
+      }
+    }
+  }
+
+  /* Utilities */
+  .flex-group-left {
+    text-align: center;
+  }
+}

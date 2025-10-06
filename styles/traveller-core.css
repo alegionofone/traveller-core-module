@@ -1,5 +1,255 @@
 /* --- base/global --- */
+@font-face {
+  font-family: 'Foundation One';
+  src: url('fonts/foundation-one.woff2');
+  font-weight: normal;
+}
+:root {
+  --font-size-8: 0.5rem;
+  --font-size-9: 0.5625rem;
+  --font-size-17: 1.0625rem;
+  --font-size-19: 1.1875rem;
+  --font-size-21: 1.3125rem;
+  --font-size-22: 1.375rem;
+  --font-size-23: 1.4375rem;
+  --font-size-25: 1.5625rem;
+  --font-size-26: 1.625rem;
+  --font-size-27: 1.6875rem;
+  --font-size-29: 1.8125rem;
+  --font-size-30: 1.875rem;
+  --font-size-31: 1.9375rem;
+  --font-size-33: 2.0625rem;
+  --font-size-34: 2.125rem;
+  --font-size-35: 2.1875rem;
+  --font-size-37: 2.3125rem;
+  --font-size-38: 2.375rem;
+  --font-size-39: 2.4375rem;
+  --font-size-40: 2.5rem;
+  --font-size-42: 2.625rem;
+  --font-foundation: "Foundation One", sans-serif;
+  --color-gold-lt: #e5c6a3;
+  --color-gold-lt-mid: #c5a684;
+  --color-gold-mid: #9f8568;
+  --color-gold-dk-mid: #74604b;
+  --color-gold-dk: #493b2e;
+  --color-grey-lt: #a7a7a7;
+  --color-grey-lt-mid: #5e5c5c;
+  --color-grey-mid: #323437;
+  --color-grey-dk-mid: #1c1f22;
+  --color-grey-dk: #0f1012;
+}
 /* defaults */
 /* overrides */
+.app.window-app.mgt2.sheet.actor .window-header,
+.app.window-app.mgt2.sheet.item .window-header {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 16px;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 6px;
+  z-index: 3;
+}
+.app.window-app .window-header .window-title,
+.app.window-app .window-header .header-button {
+  font-size: 0 !important;
+}
+.app.window-app .window-header .window-title > *,
+.app.window-app .window-header .header-button > * {
+  font-size: 12px !important;
+  line-height: 1;
+}
+.app.window-app.mgt2.sheet.actor .window-content,
+.app.window-app.mgt2.sheet.item .window-content {
+  overflow: auto !important;
+  padding-top: 20px !important;
+  background: url('assets/space.png') center top repeat !important;
+  position: relative;
+  box-sizing: border-box;
+}
+.sheet.actor .traveller-sheet,
+.sheet.item .item-sheet {
+  background: none !important;
+}
+:is(h2, h3) {
+  font-size: var(--font-size-16);
+  text-transform: uppercase;
+  color: var(--color-grey-lt);
+  border-bottom: 1px solid var(--color-grey-lt);
+}
+.shadow {
+  border: 2px solid var(--color-grey-dk);
+  background-color: var(--color-grey-dk-mid);
+  box-shadow: 0 0 3px 3px var(--color-grey-dk);
+}
+.fas:before,
+.fass:before,
+.far:before,
+.fasr:before,
+.fal:before,
+.fasl:before,
+.fat:before,
+.fast:before,
+.fad:before,
+.fadr:before,
+.fadl:before,
+.fadt:before,
+.fasds:before,
+.fasdr:before,
+.fasdl:before,
+.fasdt:before,
+.fab:before,
+.fa-solid:before,
+.fa-regular:before,
+.fa-light:before,
+.fa-thin:before,
+.fa-brands:before,
+.fa-classic:before,
+.fa-duotone:before,
+.fa-sharp:before,
+.fa-sharp-duotone:before,
+.fa:before,
+span.button {
+  color: var(--color-grey-lt);
+}
+span.button {
+  background-color: var(--color-grey-mid);
+}
+.field-value,
+.editor-content {
+  color: var(--color-grey-lt);
+}
+.field-value.writable {
+  background-color: var(--color-grey-lt);
+  color: black;
+}
+body.game .app form button {
+  background-color: var(--color-grey-mid);
+  color: var(--color-grey-lt);
+  border: 2px solid var(--color-gold-lt-mid);
+}
 /* global rules & utilities */
 /* --- actor sheets (your main actor bundle) --- */
+.window-app.mgt2.sheet.actor {
+  --sheet-w: 800px;
+  --sheet-h: 860px;
+  --sheet-header-h: 36px;
+  width: var(--sheet-w) !important;
+  height: var(--sheet-h) !important;
+}
+.sheet.actor {
+  /* Background */
+  /* Global text colours within the sheet */
+  /* Field/box titles */
+  /* History list */
+  /* Selects */
+  /* Character name block */
+  /* DMs */
+  /* Tabs */
+  /* Utilities */
+}
+.sheet.actor .traveller-sheet {
+  background-image: url(assets/space.png);
+}
+.sheet.actor label,
+.sheet.actor .addNewSkill {
+  color: var(--color-grey-lt);
+}
+.sheet.actor .characteristic-readonly,
+.sheet.actor input.armour-value {
+  color: var(--color-grey-lt);
+}
+.sheet.actor div.armour-box input {
+  color: var(--color-grey-lt);
+  text-transform: uppercase;
+}
+.sheet.actor .field-label,
+.sheet.actor label.box-title {
+  font-family: var(--font-foundation);
+  color: var(--color-gold-lt);
+  background-color: var(--color-gold-dk-mid);
+  padding: 3px;
+}
+.sheet.actor .history-list {
+  margin-bottom: 10px;
+}
+.sheet.actor .history-list .item {
+  border-bottom: 0;
+}
+.sheet.actor .history-list .history-header {
+  background-color: var(--color-gold-dk-mid);
+  font-family: var(--font-foundation);
+  color: var(--color-gold-lt);
+}
+.sheet.actor select {
+  font-family: 'Roboto';
+  font-size: var(--font-size-11);
+  color: black;
+}
+.sheet.actor .charname {
+  font-family: var(--font-foundation);
+  font-size: var(--font-size-40);
+}
+.sheet.actor .charname input {
+  color: var(--color-gold-lt);
+  text-align: center;
+  padding-bottom: 5px;
+}
+.sheet.actor .dm {
+  background: none;
+  border: none;
+  color: var(--color-grey-lt);
+}
+.sheet.actor .tabs.sheet-tabs {
+  font-family: var(--font-foundation);
+}
+.sheet.actor .tabs.sheet-tabs .item {
+  color: var(--color-gold-lt);
+}
+.sheet.actor .tabs.sheet-tabs .item.active {
+  color: white;
+  text-shadow: none;
+}
+.sheet.actor .flex-group-left {
+  text-align: center;
+}
+.window-app.mgt2.sheet.item {
+  --item-w: 600px;
+  /* <- set your width */
+  --item-h: 600px;
+  /* <- set your height */
+  --item-header-h: 36px;
+  width: var(--item-w) !important;
+  height: var(--item-h) !important;
+}
+.sheet.item {
+  /* Item name block */
+}
+.sheet.item .item-sheet {
+  background-image: url(assets/space.png);
+}
+.sheet.item .shadow {
+  border: 2px solid var(--color-grey-dk);
+  background-color: var(--color-grey-dk-mid);
+  box-shadow: 0 0 3px 3px var(--color-grey-dk);
+}
+.sheet.item .resource-label,
+.sheet.item .augment-name {
+  text-transform: uppercase;
+  color: var(--color-grey-lt);
+}
+.sheet.item .charname {
+  font-family: var(--font-foundation);
+  font-size: var(--font-size-40);
+}
+.sheet.item .charname input {
+  color: var(--color-gold-lt);
+  text-align: center;
+  padding-bottom: 5px;
+}

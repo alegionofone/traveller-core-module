@@ -1,0 +1,92 @@
+@sheet-offset: 20px;
+@bg-img: url('assets/space.png');
+
+.app.window-app.mgt2.sheet.actor .window-header,
+.app.window-app.mgt2.sheet.item  .window-header {
+  position: absolute;
+  top: 6px; left: 6px; right: 16px;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 6px;
+  z-index: 3;
+}
+.app.window-app .window-header .window-title,
+.app.window-app .window-header .header-button { font-size: 0 !important; }
+.app.window-app .window-header .window-title > *,
+.app.window-app .window-header .header-button > * { font-size: 12px !important; line-height: 1; }
+.app.window-app.mgt2.sheet.actor .window-content,
+.app.window-app.mgt2.sheet.item  .window-content {
+  overflow: auto !important;
+  padding-top: @sheet-offset !important;
+  background: @bg-img center top repeat !important;
+  position: relative;
+  box-sizing: border-box;
+}
+.sheet.actor .traveller-sheet,
+.sheet.item  .item-sheet { background: none !important; }
+
+
+
+
+:is(h2, h3) {
+    font-size: var(--font-size-16);
+    text-transform: uppercase;
+    color: var(--color-grey-lt);
+    border-bottom: 1px solid var(--color-grey-lt);
+}
+.shadow {
+    border: 2px solid var(--color-grey-dk);
+    background-color: var(--color-grey-dk-mid);
+    box-shadow: 0 0 3px 3px var(--color-grey-dk);
+}
+.fas:before,
+.fass:before,
+.far:before,
+.fasr:before,
+.fal:before,
+.fasl:before,
+.fat:before,
+.fast:before,
+.fad:before,
+.fadr:before,
+.fadl:before,
+.fadt:before,
+.fasds:before,
+.fasdr:before,
+.fasdl:before,
+.fasdt:before,
+.fab:before,
+.fa-solid:before,
+.fa-regular:before,
+.fa-light:before,
+.fa-thin:before,
+.fa-brands:before,
+.fa-classic:before,
+.fa-duotone:before,
+.fa-sharp:before,
+.fa-sharp-duotone:before,
+.fa:before,
+span.button {
+    color: var(--color-grey-lt);
+}
+span.button {
+    background-color: var(--color-grey-mid);
+}
+.field-value,
+.editor-content {
+    color: var(--color-grey-lt);
+}
+.field-value.writable {
+    background-color: var(--color-grey-lt);
+    color: black;
+}
+body.game .app form button {
+    background-color: var(--color-grey-mid);
+    color: var(--color-grey-lt);
+    border: 2px solid var(--color-gold-lt-mid);
+}

@@ -1,0 +1,39 @@
+.window-app.mgt2.sheet.item {
+  --item-w: 600px;   /* <- set your width */
+  --item-h: 600px;   /* <- set your height */
+  --item-header-h: 36px;
+
+  width: var(--item-w) !important;
+  height: var(--item-h) !important;
+}
+
+.sheet.item {
+
+  .item-sheet {
+      background-image: url(assets/space.png);
+  }
+
+  .shadow {
+    border: 2px solid var(--color-grey-dk);
+    background-color: var(--color-grey-dk-mid);
+    box-shadow: 0 0 3px 3px var(--color-grey-dk);
+  }
+
+  .resource-label,
+  .augment-name {
+    text-transform: uppercase;
+    color: var(--color-grey-lt);
+  }
+
+  /* Item name block */
+  .charname {
+    font-family: var(--font-foundation);
+    font-size: var(--font-size-40);
+
+    input {
+      color: var(--color-gold-lt);
+      text-align: center;
+      padding-bottom: 5px;
+    }
+  }
+}
